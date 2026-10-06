@@ -7,7 +7,7 @@ UnicornStudio.addScene({
     scale: 1, // rendering scale, use smaller values for performance boost (0.25-1) [optional]
     dpi: 2, // pixel ratio [optional]
     lazyLoad: true, // will not initialize the scene until it scrolls into view
-    filePath: "webgl/agilebase.json", // if youre hosting your own exported json code, point to it here (do not use both filePath and projectId, only one is required)
+    filePath: `${import.meta.env.BASE_URL}webgl/agilebase.json`, // if youre hosting your own exported json code, point to it here (do not use both filePath and projectId, only one is required)
     altText: "Agilebase", // optional text for SEO, going inside the <canvas> tag
     ariaLabel: "Agilebase", // optional text for the aria-label attribute on the <canvas> element
     production: true, // when true, will hit the global edge CDN, learn more in the help docs
@@ -33,7 +33,7 @@ UnicornStudio.addScene({
     scale: 1, // rendering scale, use smaller values for performance boost (0.25-1) [optional]
     dpi: 2, // pixel ratio [optional]
     lazyLoad: true, // will not initialize the scene until it scrolls into view
-    filePath: "webgl/stijn.json", // if youre hosting your own exported json code, point to it here (do not use both filePath and projectId, only one is required)
+    filePath: `${import.meta.env.BASE_URL}webgl/stijn.json`, // if youre hosting your own exported json code, point to it here (do not use both filePath and projectId, only one is required)
     altText: "Agilebase", // optional text for SEO, going inside the <canvas> tag
     ariaLabel: "Agilebase", // optional text for the aria-label attribute on the <canvas> element
     production: true, // when true, will hit the global edge CDN, learn more in the help docs
@@ -86,12 +86,12 @@ function activateKonamiCode() {
 
     // add image honda.gif
     const konamiImg = document.createElement("img");
-    konamiImg.src = "/images/honda.gif";
+    konamiImg.src = `${import.meta.env.BASE_URL}images/honda.gif`;
     konamiImg.alt = "Konami";
 
     // audio autoplay
     const konamiAudio = document.createElement("audio");
-    konamiAudio.src = "/libs/konami.mp3";
+    konamiAudio.src = `${import.meta.env.BASE_URL}libs/konami.mp3`;
     konamiAudio.autoplay = true;
     konamiAudio.loop = true;
 
